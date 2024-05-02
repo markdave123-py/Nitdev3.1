@@ -1,0 +1,1 @@
+export let students = [{"id":1,"name":"David Mark","age":"11"},{"id":2,"name":"Jane Doe","age":22},{"id":3,"name":"James Doe","age":21},{"id":4,"name":"Janet Doe","age":23},{"id":5,"name":"Jude Doe","age":24},{"id":6,"name":"Jamiu","age":50},{"id":7,"name":"David","age":2},{"id":8,"name":"David","age":2},{"id":9,"name":"David","age":2}]
