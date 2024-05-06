@@ -1,1 +1,1 @@
-export let User = [{"id":1,"name":"David","email":"nwaekwudavid@gmail.com","password":"123456"},{"id":2,"name":"David","email":"nwaekwudavid1@gmail.com","password":"123456"}]
+export let User = [{"id":1,"name":"David","email":"dave@gmail.com","hashedPassword":"$2b$10$5bsUJ/vCOEYSpGNe3oBr/eTuPyuWbnFjoRCV2UpvZFyHt9oRSExuC"}]

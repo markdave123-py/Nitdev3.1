@@ -4,8 +4,6 @@ import { authRouter } from './routes/auth.route.js';
 
 const app = express();
 
-console.log(PORT);
-
 app.use(express.json());
 // app.use(greet);
 
@@ -14,8 +12,6 @@ app.get('/home', (req, res) => {
 })
 
 app.use('/auth', authRouter);
-
-
 
 
 app.listen(3000, () => {

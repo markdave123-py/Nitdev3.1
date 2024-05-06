@@ -1,9 +1,10 @@
 import { signupSchema } from "../../validator/signup.schema.js";
 import { User } from "../../models/user.js"
 import { writeData } from "../../utils/fs.js";
+import { hashPassword } from "../../utils/bcrypt.js";
 
 
-export const signup = (req, res) => {
+export const signup = async (req, res) => {
 
     const {error, value} = signupSchema.validate(req.body);
 
@@ -19,11 +20,15 @@ export const signup = (req, res) => {
         return res.status(409).json({error: 'User already exists'});
     }
 
+    const hashedPassword = await hashPassword(password);
+
+    console.log(hashedPassword);
+
     const newUser = {
         id: User.length + 1,
         name,
         email,
-        password
+        hashedPassword
     }
 
     User.push(newUser);
