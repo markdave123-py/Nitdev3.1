@@ -1,6 +1,8 @@
 import { signinSchema } from "../../validator/signin.schema.js";
 import { User } from "../../models/user.js";
 import { comparePassword } from "../../utils/bcrypt.js";
+import { sanitize } from "../../utils/sanitize.js";
+import { generateToken } from "../../utils/jwt.js";
 
 export const signin = async (req, res) => {
 
@@ -24,11 +26,13 @@ export const signin = async (req, res) => {
         return res.status(400).json({ error: 'Invalid credentials' });
     }
 
-    // login user and generate access token (jwt)
-    // sanitedUser = sanitizeUser(user)
+    const token = generateToken({ id: user.id, email: user.email })
+
+    console.log(token)
 
     return res.status(200).json({
         message: 'User signed in successfully',
-        user
+        user: sanitize(user),
+        accessToken: token
     })
 }

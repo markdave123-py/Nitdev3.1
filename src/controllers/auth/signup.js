@@ -2,6 +2,7 @@ import { signupSchema } from "../../validator/signup.schema.js";
 import { User } from "../../models/user.js"
 import { writeData } from "../../utils/fs.js";
 import { hashPassword } from "../../utils/bcrypt.js";
+import { sanitize } from "../../utils/sanitize.js";
 
 
 export const signup = async (req, res) => {
@@ -39,7 +40,7 @@ export const signup = async (req, res) => {
 
     return res.status(201).json({
         message: 'User created successfully',
-        user: newUser
+        user: sanitize(newUser)
     })
 
 

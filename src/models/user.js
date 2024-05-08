@@ -1,1 +1,2 @@
-export let User = [{"id":1,"name":"David","email":"dave@gmail.com","hashedPassword":"$2b$10$5bsUJ/vCOEYSpGNe3oBr/eTuPyuWbnFjoRCV2UpvZFyHt9oRSExuC"}]
+export let User = [{ "id": 1, "name": "David", "email": "dave@gmail.com", "hashedPassword": "$2b$10$5bsUJ/vCOEYSpGNe3oBr/eTuPyuWbnFjoRCV2UpvZFyHt9oRSExuC" },
+{ "id": 2, "name": "David", "email": "dave12@gmail.com", "hashedPassword": "$2b$10$8BbpqaxpmU1ZveX/fZYkTOODWv0SnyfbU.ZUA4ueYirT1zCE7pGaq" }, { "id": 3, "name": "David", "email": "dave121@gmail.com", "hashedPassword": "$2b$10$M.e4djx77983zhZB8OgnruWMk2cxSGunpI3tfPtbtpTrEwMR.p546" }]

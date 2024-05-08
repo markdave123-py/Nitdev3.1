@@ -6,6 +6,7 @@ const app = express();
 
 app.use(express.json());
 // app.use(greet);
+console.log(PORT)
 
 app.get('/home', (req, res) => {
     res.send('how are you doing?');
